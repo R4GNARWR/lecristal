@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/fancybox.css">
+    <link rel="stylesheet" href="src/css/fonts.css">
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+
+    <div class="modal modal-custom" id="callorder" style="display:none;max-width:600px;">
+        <div class="close-modal"></div>
+        <div class="modal-custom__inner">
+            <div class="modal-custom__label">
+                УЗНАТЬ ПОДРОБНОСТИ
+            </div>
+            <div class="modal-custom__text">
+                Мы перезвоним и обсудим детали
+            </div>
+
+
+            <form action="">
+                <input class="custom-input" type="text" placeholder="Ваше имя">
+                <input class="custom-input" type="tel" placeholder="Телефон">
+                <button type="submit" class="btn btn-primary" id="testId">отправить</button>
+                <div class="modal-custom__checkbox">
+                    <label class="modal-custom__checkbox-label">
+                        <input type="checkbox" id="callorderCheckbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="modal-custom__checkbox-text">Нажимая кнопку, вы соглашаетесь <br>на обработку персональных данных</div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    <div class="modal modal-custom" id="callorderResult" style="display:none;max-width:600px;">
+        <div class="close-modal"></div>
+        <div class="modal-custom__inner">
+            <div class="modal-custom__label">
+                ДАННЫЕ  <br>
+                УСПЕШНО <br>
+                ОТПРАВЛЕНЫ!
+            </div>
+            <!-- <div class="modal-custom__text">
+                Мы перезвоним и обсудим детали
+            </div> -->
+        </div>
+    </div>
+
+    <main class="main">
+        <section class="mainPage">
+            <div class="mainPage-content">
+                <div class="main-logo">
+                    <img src="src/img/logo.svg" alt="">
+                </div>
+                
+                <div class="main-title">
+                    СКОРО...
+                </div>
+
+                <button class="btn btn-primary " id="callorderModal">Узнать подробности</button>
+
+                <div class="main-phone">
+                    <a href="tel:201-00-00">201-00-00</a>  
+                </div>
+                <div class="main-policy">
+                    Застройщик ООО СЗ «CY-1. Универмаг». Проектная декларация размещена на сайте наш.дом.рф
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/inputmask.min.js"></script>
+    <script src="src/js/fancybox.umd.js"></script>
+    <script src="src/js/phoneinput.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

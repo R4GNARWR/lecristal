@@ -1,0 +1,439 @@
+:root
+{
+    --index: calc(1vw + 1vh);
+    --main-bg: #848C90;
+    --primary: #98A0A4;
+}
+  
+html 
+{
+	scroll-behavior: smooth;
+	font-size: calc(var(--index) * 0.33333);
+}
+
+body
+{
+    font-family: "ArodoraPro";
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover
+{
+    color: unset;
+}
+
+.mainPage
+{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--main-bg);
+    padding-top: 14.6rem;
+    display: flex; 
+    align-items: stretch; 
+    justify-content: center;
+    position: relative;
+}
+.mainPage-content
+{
+    height: auto;  
+    position: relative;
+    z-index: 10;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.mainPage::before
+{
+    content: '';
+    width: 100%;
+    height: 25rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../img/pattern-top.png') no-repeat bottom/cover;
+}
+.mainPage::after
+{
+    content: '';
+    width: 100%;
+    height: 25rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('../img/pattern-bottom.png') no-repeat top/cover;
+}
+.main-logo
+{
+    width: 44.6rem;
+}
+.main-logo img
+{
+    width: 100%;
+    aspect-ratio: 1/0.9;
+    object-fit: contain;
+}
+.btn-primary
+{
+    padding: 2rem 6rem;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.315em;
+    letter-spacing: 0.16em;
+    background-color: var(--primary);
+    border: 1px solid #FFFFFF;
+    font-family: 'TT Firs Neue';
+    color: #FFFFFF;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active
+{
+    background-color: #FFFFFF;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.main-title
+{
+    margin-top: 4.4rem;
+    margin-bottom: 8.3rem;
+    font-weight: 300;
+    font-size: 6.5rem;
+    line-height: 110.5%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.main-phone
+{
+    margin-top: 8.4rem;
+    font-weight: 300;
+    font-size: 6.5rem;
+    line-height: 110.5%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.main-policy
+{
+    margin-top: auto;
+    margin-bottom: 4.3rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+
+.modal-custom
+{
+    min-height: 88.3rem;
+    max-height: 100vh;
+    height: fit-content;
+    min-width: 55.2rem;
+    padding: 31.5rem 96px 11.2rem 72px;
+    background-color: #BCC4C8;
+    position: relative;
+}
+
+.close-modal
+{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+}
+.close-modal::after
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-bg);
+    transform: rotate(45deg);
+}
+.close-modal::before
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-bg);
+    transform: rotate(-45deg);
+}
+.modal-custom__inner
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.modal-custom__inner form
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.modal-custom::before
+{
+    content: '';
+    width: 100%;
+    height: 25rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../img/pattern-top.png') no-repeat bottom center/200rem;
+}
+.modal-custom__label
+{
+    font-weight: 300;
+    font-size: 4.6rem;
+    line-height: 4.8rem;
+    color: var(--main-bg);
+    margin-bottom: 4.2rem;
+}
+.modal-custom__text
+{
+    margin-bottom: 4.5rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+    color: var(--main-bg);
+}
+.custom-input
+{
+    width: 100%;
+    outline: none;
+    padding: 15px 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--main-bg);
+    font-family: 'TT Firs Neue';
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.3em;
+    color: var(--main-bg);
+}
+.custom-input::placeholder
+{
+    font-family: 'TT Firs Neue';
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.3em;
+    color: var(--main-bg);
+}
+.modal-custom__inner form .btn
+{
+    background: var(--main-bg);
+    border: 1px solid var(--main-bg);
+    margin-top: 3.9rem;
+}
+.modal-custom__inner form .btn:hover
+{
+    background:#FFFFFF;
+    border: 1px solid var(--main-bg);
+    color:var(--main-bg) ;
+}
+.modal-custom__checkbox
+{
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 2.4rem;
+}
+
+.modal-custom__checkbox-label
+{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+.modal-custom__checkbox-label input
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+.modal-custom__checkbox-label::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #D9D9D9;
+    z-index: 10;
+    pointer-events: none;
+}
+.modal-custom__checkbox-label .checkmark
+{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 100%;
+    background: url('../img/check.png') no-repeat bottom center/contain;
+    z-index: 20;
+    pointer-events: none;
+}
+.modal-custom__checkbox-label input:checked ~ .checkmark
+{
+    opacity: 1;
+}
+.modal-custom__checkbox-text
+{
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.3em;
+    letter-spacing: 0.02em;
+    color: var(--main-bg);
+}
+
+@media (min-width: 1920px) {
+    .mainPage
+    {
+        padding-top: 8rem;
+    }
+    .modal-custom__checkbox-label
+    {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .main-title
+    {
+        margin-top: 40px;
+        margin-bottom: 35px;
+        font-size: 65px;
+    }
+    .main-phone
+    {
+        margin-top: 45px;
+        font-size: 48px;
+    }
+    .main-policy
+    {
+        font-size: 14px;
+    }
+    .btn-primary
+    {
+        font-size: 16px;
+        padding: 25px 30px;
+    }
+    .modal-custom__checkbox-text
+    {
+        font-style: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainPage
+    {
+        padding-top: 96px;
+    }
+
+    .main-policy
+    {
+        padding: 32px;
+    }
+    .mainPage::before
+    {
+        height: 189px;
+        background: url('../img/pattern-top.png') no-repeat top center/1100px;
+    }
+    .mainPage::after
+    {
+        height: 189px;
+        background: url('../img/pattern-bottom.png') no-repeat bottom center/1100px;
+    }
+    .modal-custom
+    {
+        min-height: 100vh;
+        padding: 168px 36px 119px 40px;
+    }
+    .modal-custom__label
+    {
+        margin-bottom: 46px;
+        font-size: 40px;
+        line-height: 105.3%;
+        
+    }
+    .modal-custom__text
+    {
+        margin-bottom: 26px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .custom-input,
+    .custom-input::placeholder
+    {
+
+        font-size: 20px;
+    }
+    .modal-custom__checkbox-text
+    {
+        font-size: 14px;
+    }
+    .modal-custom__checkbox
+    {
+        margin-top: 7px;
+    }
+    .modal-custom__inner form .btn
+    {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-logo
+    {
+        width: 100%;
+        padding: 0 45px;
+    }
+
+}
+@media (max-width: 320px)
+{
+    .modal-custom__label
+    {
+        font-size: 8rem;
+    }
+    .modal-custom__text
+    {
+        font-size: 6rem;
+    }
+    .custom-input,
+    .custom-input::placeholder
+    {
+        font-size: 5rem;
+    }
+    .modal-custom__checkbox-text
+    {
+        font-size: 3rem;
+    }
+}
